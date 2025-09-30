@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabiana Psicóloga</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-4 shadow">
+    <div class="flex items-center gap-2">
+      <img src="./assets/img/icone.png" alt="Logo Fabiana Psicóloga" class="h-10">
+      <span class="font-bold text-sm md:text-lg">Fabiana Carvalho</span>
+    </div>
+    <nav class="flex gap-4">
+      <a href="./sobre.html" class="hover:text-indigo-600 bg-indigo-50 p-2 border-2 rounded border-indigo-300">Sobre</a>
+      <a href="./serviços.html" class="hover:text-indigo-600 bg-indigo-50 p-2 border-2 rounded border-indigo-300">Serviços</a>
+      <a href="#contato" class="hover:text-indigo-600 bg-indigo-50 p-2 border-2 rounded border-indigo-300">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-20 bg-indigo-50 flex flex-col items-center gap-4 px-4">
+    <img src="./assets/img/fabiana.png" alt="foto de fabiana" class="mx-auto w-32 h-32 rounded-full border-4 border-indigo-300">
+    <h2 id="typewriter" class="text-2xl md:text-4xl font-bold text-indigo-700"></h2>
+    <p class="mt-4 text-sm md:text-lg">Apoio psicológico para o seu bem-estar</p>
+    <p class="text-sm ">CRP-04/76665</p>
+  </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const element = document.getElementById("typewriter");
+    const text = "OLÁ SOU FABIANA";
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 180); // velocidade da digitação (ms)
+      }
+    }
+
+    type();
+  });
+</script>
+</body>
+</html>
